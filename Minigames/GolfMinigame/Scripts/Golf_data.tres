@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://dk6hei4pns24w"]
+
+[ext_resource type="Script" uid="uid://drgtpugs7dwxs" path="res://Scripts/Minigames/MinigameData.gd" id="1_kwdgt"]
+
+[resource]
+script = ExtResource("1_kwdgt")
+minigameName = "Golf"
+developersAndPosition = Dictionary[String, String]({
+"Ananda": "diseño, programación, arte"
+})
+metadata/_custom_type_script = "uid://drgtpugs7dwxs"
