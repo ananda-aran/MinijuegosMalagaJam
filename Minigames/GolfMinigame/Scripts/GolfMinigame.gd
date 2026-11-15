@@ -15,7 +15,7 @@ func shoot(id):
 	print(id)
 	if id ==0:
 		print("hit")
-		ball.apply_impulse(calculate_shoot() * 5)
+		ball.apply_impulse(calculate_shoot() * 1.5)
 		arrow.hide()
 		
 func rotate_arrow():
