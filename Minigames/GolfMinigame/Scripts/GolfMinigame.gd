@@ -82,9 +82,12 @@ func rotate_arrow():
 		clockwise=true
 		
 func calculate_shoot():
-	var direction = Vector2.from_angle(arrow.rotation.y)
+	#var direction = Vector2.from_angle(arrow.rotation.y)
+	var direction = arrow.global_transform.basis.z
+
 	print(direction)
-	return Vector3(direction.y, 0,direction.x)
+	#return Vector3(direction.y, 0,direction.x)
+	return direction
 
 
 

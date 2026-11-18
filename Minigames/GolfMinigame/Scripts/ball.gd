@@ -9,6 +9,9 @@ var sped_up: bool = false
 
 func _ready() -> void:
 	freeze=true
+	
+func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
+	pass
 
 func change_color():
 	if player == 0:
