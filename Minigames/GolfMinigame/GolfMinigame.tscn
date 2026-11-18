@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ombg7dnkfbh8" path="res://Minigames/GolfMinigame/Scripts/GolfMinigame.gd" id="1_kcuy2"]
 [ext_resource type="Resource" uid="uid://dk6hei4pns24w" path="res://Minigames/GolfMinigame/Scripts/Golf_data.tres" id="2_oyb5e"]
-[ext_resource type="Script" uid="uid://egqtt3wbmp6r" path="res://Minigames/GolfMinigame/Scripts/ball.gd" id="3_oyb5e"]
+[ext_resource type="PackedScene" uid="uid://bsdy0js76ej80" path="res://Minigames/GolfMinigame/prefabs/ball.tscn" id="2_rs2ta"]
 [ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/arrow.gd" id="4_rs2ta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb10s"]
@@ -10,20 +10,6 @@ albedo_color = Color(0.6117647, 1, 0.5372549, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyb5e"]
 albedo_color = Color(0.6627451, 1, 1, 1)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oyb5e"]
-bounce = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcuy2"]
-albedo_color = Color(1, 0.15294118, 0.34901962, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_gqwiy"]
-material = SubResource("StandardMaterial3D_kcuy2")
-radius = 0.05
-height = 0.1
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_kcuy2"]
-radius = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqwiy"]
 
@@ -49,8 +35,9 @@ albedo_color = Color(1, 0.4, 0.23137255, 1)
 material = SubResource("StandardMaterial3D_fqu8o")
 size = Vector3(1, 1, 0.035)
 
-[node name="GolfMinijuego" type="Node3D" unique_id=445349756]
+[node name="GolfMinijuego" type="Node3D" unique_id=445349756 groups=["balls"]]
 script = ExtResource("1_kcuy2")
+ball = ExtResource("2_rs2ta")
 minigameData = ExtResource("2_oyb5e")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1020314080]
@@ -110,17 +97,6 @@ shadow_blur = 1.896
 
 [node name="ball start" type="Node3D" parent="." unique_id=493377747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08176647, 0.007748127, -1.8636429)
-
-[node name="ball" type="RigidBody3D" parent="ball start" unique_id=752856963]
-mass = 0.343
-physics_material_override = SubResource("PhysicsMaterial_oyb5e")
-script = ExtResource("3_oyb5e")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ball start/ball" unique_id=43192976]
-mesh = SubResource("SphereMesh_gqwiy")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ball start/ball" unique_id=237024589]
-shape = SubResource("SphereShape3D_kcuy2")
 
 [node name="Rotate_Arrow" type="Node3D" parent="ball start" unique_id=342181824]
 script = ExtResource("4_rs2ta")

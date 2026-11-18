@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bsdy0js76ej80"]
+
+[ext_resource type="Script" uid="uid://egqtt3wbmp6r" path="res://Minigames/GolfMinigame/Scripts/ball.gd" id="1_oesaw"]
+[ext_resource type="Material" uid="uid://c1pkckj4jp88" path="res://Minigames/GolfMinigame/materials/player_0.tres" id="2_r8qkn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oyb5e"]
+bounce = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_gqwiy"]
+material = ExtResource("2_r8qkn")
+radius = 0.05
+height = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kcuy2"]
+radius = 0.05
+
+[node name="ball" type="RigidBody3D" unique_id=310119414]
+mass = 0.343
+physics_material_override = SubResource("PhysicsMaterial_oyb5e")
+script = ExtResource("1_oesaw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=305130501]
+mesh = SubResource("SphereMesh_gqwiy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1412154405]
+shape = SubResource("SphereShape3D_kcuy2")
