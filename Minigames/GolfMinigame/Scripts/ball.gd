@@ -7,7 +7,10 @@ extends RigidBody3D
 var shot: bool = false
 var sped_up: bool = false
 
+signal stopping
+
 func _ready() -> void:
+	
 	freeze=true
 	
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
@@ -26,9 +29,11 @@ func change_color():
 func unfreeze():
 	freeze=false
 	
+	
 func _physics_process(delta: float) -> void:
 	if shot==true:
 		if linear_velocity.length() >= 0.1:
 			sped_up=true
-		if linear_velocity.length() <= 0.07 and sped_up==true:
+		if linear_velocity.length() <= 0.09 and sped_up==true:
 			linear_damp=15
+			stopping.emit()
