@@ -6,7 +6,6 @@ extends MinigameBase
 @onready var arrow = $"ball start/Rotate_Arrow"
 @onready var labelstart = $UI/Label
 @onready var start_point = $"ball start"
-@onready var goal = $Goal
 
 @onready var current_ball #=$"ball start/ball" #DEBUG
 
@@ -109,6 +108,7 @@ func get_winner():
 	var current_distance
 	var winner
 	for ball in get_tree().get_nodes_in_group("balls"):
+		var goal = get_tree().get_first_node_in_group("goal")
 		current_distance=(ball.global_position-goal.global_position).length()
 		if (ball.global_position-goal.global_position).length() <= lowest_distance:
 			lowest_distance = current_distance

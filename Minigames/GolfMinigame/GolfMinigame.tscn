@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://dk6hei4pns24w" path="res://Minigames/GolfMinigame/Scripts/Golf_data.tres" id="2_oyb5e"]
 [ext_resource type="PackedScene" uid="uid://bsdy0js76ej80" path="res://Minigames/GolfMinigame/prefabs/ball.tscn" id="2_rs2ta"]
 [ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/arrow.gd" id="4_rs2ta"]
+[ext_resource type="PackedScene" uid="uid://dy3uqkroxx4ja" path="res://Minigames/GolfMinigame/prefabs/goal.tscn" id="5_rs2ta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb10s"]
 albedo_color = Color(0.6117647, 1, 0.5372549, 1)
@@ -24,16 +25,6 @@ ambient_light_color = Color(0.08398601, 0.32310814, 0.42800125, 1)
 ambient_light_energy = 1.56
 ssao_enabled = true
 ssao_intensity = 1.95
-
-[sub_resource type="BoxMesh" id="BoxMesh_gqwiy"]
-size = Vector3(0.20410156, 2.5703125, 0.24359131)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqu8o"]
-albedo_color = Color(1, 0.4, 0.23137255, 1)
-
-[sub_resource type="PrismMesh" id="PrismMesh_d0qsu"]
-material = SubResource("StandardMaterial3D_fqu8o")
-size = Vector3(1, 1, 0.035)
 
 [node name="GolfMinijuego" type="Node3D" unique_id=445349756 groups=["balls"]]
 script = ExtResource("1_kcuy2")
@@ -146,13 +137,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 91
 text = "P1 start"
 
-[node name="Goal" type="Node3D" parent="." unique_id=985753111]
+[node name="Goal" parent="." unique_id=811432296 instance=ExtResource("5_rs2ta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1391852, 0, 2.4829788)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Goal" unique_id=1183508365]
-transform = Transform3D(0.16535625, 0, 0, 0, 0.4948054, 0, 0, 0, 0.16535625, 0.0014648438, 0.5253774, 0.007965088)
-mesh = SubResource("BoxMesh_gqwiy")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Goal" unique_id=1776090518]
-transform = Transform3D(7.4220576e-09, -0.3058717, 0, 0.3058717, 7.4220576e-09, 0, 0, 0, 0.30587167, -0.16224211, 1.0115395, 0)
-mesh = SubResource("PrismMesh_d0qsu")
+[node name="TestLevel" type="Node3D" parent="." unique_id=306321221]

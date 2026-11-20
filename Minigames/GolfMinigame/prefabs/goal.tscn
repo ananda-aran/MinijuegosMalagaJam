@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dy3uqkroxx4ja"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gqwiy"]
+size = Vector3(0.20410156, 2.5703125, 0.24359131)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqu8o"]
+albedo_color = Color(1, 0.4, 0.23137255, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_d0qsu"]
+material = SubResource("StandardMaterial3D_fqu8o")
+size = Vector3(1, 1, 0.035)
+
+[node name="Goal" type="Node3D" unique_id=811432296 groups=["goal"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1661697126]
+transform = Transform3D(0.16535625, 0, 0, 0, 0.4948054, 0, 0, 0, 0.16535625, 0.0014648438, 0.5253774, 0.007965088)
+mesh = SubResource("BoxMesh_gqwiy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2130959532]
+transform = Transform3D(7.4220576e-09, -0.3058717, 0, 0.3058717, 7.4220576e-09, 0, 0, 0, 0.30587167, -0.16224211, 1.0115395, 0)
+mesh = SubResource("PrismMesh_d0qsu")
