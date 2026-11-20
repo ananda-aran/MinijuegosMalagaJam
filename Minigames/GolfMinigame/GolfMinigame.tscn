@@ -6,12 +6,6 @@
 [ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/arrow.gd" id="4_rs2ta"]
 [ext_resource type="PackedScene" uid="uid://dy3uqkroxx4ja" path="res://Minigames/GolfMinigame/prefabs/goal.tscn" id="5_rs2ta"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb10s"]
-albedo_color = Color(0.6117647, 1, 0.5372549, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyb5e"]
-albedo_color = Color(0.6627451, 1, 1, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqwiy"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_gqwiy"]
@@ -30,73 +24,6 @@ ssao_intensity = 1.95
 script = ExtResource("1_kcuy2")
 ball = ExtResource("2_rs2ta")
 minigameData = ExtResource("2_oyb5e")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1020314080]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15130824, -1.1476479, 0.98101246)
-use_collision = true
-size = Vector3(4.747986, 2.2001953, 4.970764)
-material = SubResource("StandardMaterial3D_hb10s")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1205861378]
-transform = Transform3D(0.7568039, 0, 0.65364206, 0, 1, 0, -0.65364206, 0, 0.7568039, 0.3231905, 0.089450836, 2.6040213)
-use_collision = true
-size = Vector3(1, 0.27392578, 1)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=842625020]
-transform = Transform3D(0.7568039, 0, 0.65364206, 0, 1, 0, -0.65364206, 0, 0.7568039, -2.2496152, 0.089450836, 2.8048174)
-use_collision = true
-size = Vector3(1, 0.27392578, 2.158081)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=175520069]
-transform = Transform3D(0.9822324, 0, 0.18766868, 0, 1, 0, -0.18766868, 0, 0.9822324, 0.86409956, 0.0894506, 1.8012357)
-use_collision = true
-size = Vector3(1, 0.27392578, 1)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=908116283]
-transform = Transform3D(0.9822324, 0, 0.18766868, 0, 1, 0, -0.18766868, 0, 0.9822324, -1.7200581, 0.0894506, 1.3972212)
-use_collision = true
-size = Vector3(1.3608398, 0.27392578, 1)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1104823108]
-transform = Transform3D(0.9822324, 0, 0.18766868, 0, 1, 0, -0.18766868, 0, 0.9822324, -0.7187132, 0.0894506, 3.070743)
-use_collision = true
-size = Vector3(1, 0.27392578, 1)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=493847719]
-transform = Transform3D(0.9822324, 0, 0.18766868, 0, 1, 0, -0.18766868, 0, 0.9822324, 1.5989145, 0.089450836, 0.77729)
-use_collision = true
-size = Vector3(1, 0.27392578, 0.7270508)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=296299802]
-transform = Transform3D(0.9822324, 0, 0.18766868, 0, 1, 0, -0.18766868, 0, 0.9822324, 1.460207, 0.08945036, -0.015666008)
-use_collision = true
-size = Vector3(1, 0.27392578, 0.7270508)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=5082328]
-transform = Transform3D(0.7568039, 0, 0.65364206, 0, 1, 0, -0.65364206, 0, 0.7568039, -1.551919, 0.0894506, -0.035158277)
-use_collision = true
-size = Vector3(1, 0.27392578, 1.75)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=896906184]
-transform = Transform3D(0.9958776, 0, -0.090707175, 0, 1, 0, 0.090707175, 0, 0.9958776, 0.42710286, 0.07574797, -1.0889095)
-use_collision = true
-size = Vector3(3.8084717, 0.27392578, 1)
-material = SubResource("StandardMaterial3D_oyb5e")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=737302189]
-transform = Transform3D(-1, -3.2636883e-08, 8.110226e-08, 4.8882555e-08, 0.5603819, 0.8282343, -7.2479224e-08, 0.8282343, -0.5603819, -0.0007635951, 2.2633514, -0.546373)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=352557857]
-transform = Transform3D(0.70041543, 0.414457, -0.5810712, 0.54037356, 0.22393045, 0.8110806, 0.4662775, -0.88208884, -0.06711726, 0.20135206, 0.720793, 1.9345499)
-shadow_blur = 1.896
 
 [node name="ball start" type="Node3D" parent="." unique_id=493377747]
 
@@ -139,5 +66,3 @@ text = "P1 start"
 
 [node name="Goal" parent="." unique_id=811432296 instance=ExtResource("5_rs2ta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1391852, 0, 2.4829788)
-
-[node name="TestLevel" type="Node3D" parent="." unique_id=306321221]

@@ -19,7 +19,7 @@ signal end_game
 
 func _ready() -> void:
 	print("ready")
-	
+	instantiate_level()
 	set_double_physics()
 	print(PlayersController.GetCurrentPlayersIds())
 	
@@ -35,6 +35,9 @@ func OnMinigameStarted() -> void:
 func _physics_process(delta: float) -> void:
 	rotate_arrow()
 
+func instantiate_level():
+	var level = load("res://Minigames/GolfMinigame/prefabs/test_level.tscn").instantiate()
+	add_child(level)
 
 func game_turns():
 	#await get_tree().create_timer(2).timeout
@@ -104,7 +107,7 @@ func calculate_shoot():
 
 
 func get_winner():
-	var lowest_distance=10000000
+	var lowest_distance=INF
 	var current_distance
 	var winner
 	for ball in get_tree().get_nodes_in_group("balls"):
@@ -113,6 +116,8 @@ func get_winner():
 		if (ball.global_position-goal.global_position).length() <= lowest_distance:
 			lowest_distance = current_distance
 			winner=ball
+			print(lowest_distance)
+			print(winner)
 	labelstart.show()
 	labelstart.text=str(winner.player)+" wins"
 	ScoreManager.AddVictoryToPlayer(winner.player)
