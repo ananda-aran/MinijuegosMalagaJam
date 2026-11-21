@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	rotate_arrow()
 
 func instantiate_level():
-	var level = load("res://Minigames/GolfMinigame/prefabs/level_1.tscn").instantiate()
+	var level = load("res://Minigames/GolfMinigame/prefabs/level_2.tscn").instantiate()
 	add_child(level)
 
 func game_turns():
