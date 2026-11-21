@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://dk6hei4pns24w" path="res://Minigames/GolfMinigame/Scripts/Golf_data.tres" id="2_oyb5e"]
 [ext_resource type="PackedScene" uid="uid://bsdy0js76ej80" path="res://Minigames/GolfMinigame/prefabs/ball.tscn" id="2_rs2ta"]
 [ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/arrow.gd" id="4_rs2ta"]
-[ext_resource type="PackedScene" uid="uid://dy3uqkroxx4ja" path="res://Minigames/GolfMinigame/prefabs/goal.tscn" id="5_rs2ta"]
+[ext_resource type="Script" uid="uid://7n3pjwakttr7" path="res://Minigames/GolfMinigame/Scripts/plane_of_death.gd" id="5_rs2ta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqwiy"]
 
@@ -19,6 +19,8 @@ ambient_light_color = Color(0.08398601, 0.32310814, 0.42800125, 1)
 ambient_light_energy = 1.56
 ssao_enabled = true
 ssao_intensity = 1.95
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gqwiy"]
 
 [node name="GolfMinijuego" type="Node3D" unique_id=445349756 groups=["balls"]]
 script = ExtResource("1_kcuy2")
@@ -64,5 +66,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 91
 text = "P1 start"
 
-[node name="Goal" parent="." unique_id=811432296 instance=ExtResource("5_rs2ta")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1391852, 0, 2.4829788)
+[node name="PlaneOfDeath" type="Node3D" parent="." unique_id=192376743]
+script = ExtResource("5_rs2ta")
+
+[node name="Area3D" type="Area3D" parent="PlaneOfDeath" unique_id=887118805]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlaneOfDeath/Area3D" unique_id=1589806183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.227395, 0)
+shape = SubResource("WorldBoundaryShape3D_gqwiy")
+
+[connection signal="body_entered" from="PlaneOfDeath/Area3D" to="PlaneOfDeath" method="_on_area_3d_body_entered"]

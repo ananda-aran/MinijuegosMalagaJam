@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	rotate_arrow()
 
 func instantiate_level():
-	var level = load("res://Minigames/GolfMinigame/prefabs/test_level.tscn").instantiate()
+	var level = load("res://Minigames/GolfMinigame/prefabs/level_1.tscn").instantiate()
 	add_child(level)
 
 func game_turns():
@@ -73,7 +73,7 @@ func shoot(id):
 		print("hit")
 		shot.emit()
 		current_ball.unfreeze()
-		current_ball.apply_central_impulse(calculate_shoot() * 1.5)
+		current_ball.apply_central_impulse(calculate_shoot() * 2)
 		current_ball.shot=true
 		arrow.hide()
 		can_shoot=false

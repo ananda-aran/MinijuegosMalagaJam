@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blmfiyh5rxuhd"]
+
+[ext_resource type="PackedScene" uid="uid://d1tgl8xyo2bt3" path="res://Minigames/GolfMinigame/assets/level1-col.glb" id="1_6xpb6"]
+[ext_resource type="PackedScene" uid="uid://dy3uqkroxx4ja" path="res://Minigames/GolfMinigame/prefabs/goal.tscn" id="2_ybtdu"]
+
+[node name="TestLevel" type="Node3D" unique_id=869477382]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=689115719]
+transform = Transform3D(-0.9994785, 0.026743798, -0.01809475, 0.002280491, 0.61744505, 0.7866107, 0.03220947, 0.7861593, -0.61718404, -0.14684784, 6.2181597, -3.044189)
+fov = 44.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=11143895]
+transform = Transform3D(0.70041543, 0.414457, -0.5810712, 0.54037356, 0.22393045, 0.8110806, 0.4662775, -0.88208884, -0.06711726, 0.20135206, 0.720793, 1.9345499)
+shadow_blur = 1.896
+
+[node name="level1-col" parent="." unique_id=1242248216 instance=ExtResource("1_6xpb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.366555, -0.053874493, 2.1577451)
+
+[node name="Goal" parent="." unique_id=811432296 instance=ExtResource("2_ybtdu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9741921, 0.14266986, 5.104498)

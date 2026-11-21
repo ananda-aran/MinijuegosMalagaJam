@@ -28,6 +28,10 @@ func change_color():
 
 func unfreeze():
 	freeze=false
+
+func frozen():
+	freeze=true
+	linear_velocity=Vector3.ZERO
 	
 	
 func _physics_process(delta: float) -> void:
