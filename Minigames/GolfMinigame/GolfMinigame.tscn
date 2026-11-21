@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ombg7dnkfbh8" path="res://Minigames/GolfMinigame/Scripts/GolfMinigame.gd" id="1_kcuy2"]
 [ext_resource type="Resource" uid="uid://dk6hei4pns24w" path="res://Minigames/GolfMinigame/Scripts/Golf_data.tres" id="2_oyb5e"]
 [ext_resource type="PackedScene" uid="uid://bsdy0js76ej80" path="res://Minigames/GolfMinigame/prefabs/ball.tscn" id="2_rs2ta"]
-[ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/arrow.gd" id="4_rs2ta"]
-[ext_resource type="Script" uid="uid://7n3pjwakttr7" path="res://Minigames/GolfMinigame/Scripts/plane_of_death.gd" id="5_rs2ta"]
+[ext_resource type="Script" uid="uid://bxglq8w5vp7k5" path="res://Minigames/GolfMinigame/Scripts/golf_arrow.gd" id="4_rs2ta"]
+[ext_resource type="Script" uid="uid://7n3pjwakttr7" path="res://Minigames/GolfMinigame/Scripts/golf_plane_of_death.gd" id="5_rs2ta"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqwiy"]
 

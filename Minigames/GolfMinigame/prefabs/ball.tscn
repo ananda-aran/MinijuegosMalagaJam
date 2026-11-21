@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bsdy0js76ej80"]
 
-[ext_resource type="Script" uid="uid://egqtt3wbmp6r" path="res://Minigames/GolfMinigame/Scripts/ball.gd" id="1_oesaw"]
+[ext_resource type="Script" uid="uid://egqtt3wbmp6r" path="res://Minigames/GolfMinigame/Scripts/golf_ball.gd" id="1_oesaw"]
 [ext_resource type="Material" uid="uid://c1pkckj4jp88" path="res://Minigames/GolfMinigame/materials/player_0.tres" id="2_r8qkn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oyb5e"]
